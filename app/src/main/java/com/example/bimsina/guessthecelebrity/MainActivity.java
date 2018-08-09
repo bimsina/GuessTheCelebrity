@@ -157,9 +157,6 @@ public class MainActivity extends AppCompatActivity {
             result = task.execute("http://www.posh24.se/kandisar").get();
             String[] split = result.split("<div class=\"sidebarContainer\">");
 
-//            result = task.execute("https://www.babepedia.com/pornstartop100").get();
-//            String[] split = result.split("<div class=\"thumbtext\">#100:");
-
             p = Pattern.compile("<img src=\"(.*?)\"");
             matcher = p.matcher(split[0]);
             while(matcher.find()){
